@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Abhishek Shah - Python Developer, AI Enthusiast, Web Developer, and Data Analyst Portfolio"
+    />
+    <title>Abhishek Shah | Developer Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader-wrapper" aria-label="Loading portfolio">
+      <div class="loader-ring"></div>
+      <p>Loading Portfolio...</p>
+    </div>
+
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <header class="navbar-container">
+      <nav class="navbar section-container">
+        <a href="#home" class="logo">Abhishek<span>.dev</span></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <button id="menuToggle" class="icon-btn mobile-only" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero section-container">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>Abhishek Shah</h1>
+          <h2>
+            <span id="typingText"></span>
+            <span class="cursor">|</span>
+          </h2>
+          <p>
+            Aspiring Full Stack Engineer with a strong foundation in software development, web and
+            mobile application development, and database management.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+          <div class="social-icons">
+            <a href="https://github.com/Abhishekshah54" target="_blank" rel="noopener" aria-label="GitHub"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/abhishekshah1909"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="mailto:shahabhishek7789@gmail.com" aria-label="Email"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="glow-orb orb-one"></div>
+          <div class="glow-orb orb-two"></div>
+          <div class="hero-card glass-card">
+            <h3>Role Snapshot</h3>
+            <ul>
+              <li>Aspiring Full Stack Engineer</li>
+              <li>Python Developer</li>
+              <li>AI Enthusiast</li>
+              <li>BCA Student (CGPA: 8.97)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-container reveal">
+        <div class="section-heading">
+          <p>Who I Am</p>
+          <h2>About Me</h2>
+        </div>
+        <div class="about-grid">
+          <article class="glass-card">
+            <h3>Personal Introduction</h3>
+            <p>
+              I am a proactive BCA student from Rajkot, Gujarat, India, with experience designing,
+              developing, and deploying efficient software solutions in collaborative environments.
+              I enjoy solving real-world problems through full stack development, automation, AI, and
+              data analytics.
+            </p>
+          </article>
+          <article class="glass-card">
+            <h3>Education</h3>
+            <p><strong>Marwadi University</strong></p>
+            <p>Bachelor of Computer Applications (BCA) | Jun 2023 - Mar 2026</p>
+            <p>GPA: 8.97 CGPA</p>
+            <p>Rajkot, Gujarat, India</p>
+            <p>
+              Focused on programming, software development, database management, web development,
+              Android development, DSA, machine learning, and data mining.
+            </p>
+          </article>
+        </div>
+        <a href="assets/Abhishek Shah.pdf" download="Abhishek-Shah-Resume.pdf" class="btn btn-primary resume-btn"
+          ><i class="fa-solid fa-file-arrow-down"></i> Download Resume</a
+        >
+      </section>
+
+      <section id="skills" class="section section-container reveal">
+        <div class="section-heading">
+          <p>Capabilities</p>
+          <h2>Skills & Languages</h2>
+        </div>
+
+        <div class="skills-block">
+          <h3 class="skills-subtitle">Core Skills</h3>
+          <div class="languages-grid skills-unified-grid">
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-layer-group"></i>
+              <h3>Full Stack Development</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-react"></i>
+              <h3>Web & Mobile App Development</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-database"></i>
+              <h3>Database Management</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-sitemap"></i>
+              <h3>Software Architecture</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-cloud"></i>
+              <h3>Cloud & Cybersecurity Basics</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-vial"></i>
+              <h3>Software Testing</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-puzzle-piece"></i>
+              <h3>Problem Solving Skills</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-lightbulb"></i>
+              <h3>Innovative Mindset</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-chart-simple"></i>
+              <h3>Analytical Thinking</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-users"></i>
+              <h3>Team Collaboration</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-rotate"></i>
+              <h3>Adaptability</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-brain"></i>
+              <h3>AI Integration</h3>
+            </article>
+          </div>
+        </div>
+
+        <div class="skills-block">
+          <h3 class="skills-subtitle">Programming Languages</h3>
+          <div class="languages-grid skills-unified-grid">
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-python"></i>
+              <h3>Python</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-java"></i>
+              <h3>Java</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-code"></i>
+              <h3>C / C++</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-code"></i>
+              <h3>C#</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-php"></i>
+              <h3>Core PHP</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-chart-line"></i>
+              <h3>R Programming</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-js"></i>
+              <h3>JavaScript</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-code-branch"></i>
+              <h3>TypeScript</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-html5"></i>
+              <h3>HTML5</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-css3-alt"></i>
+              <h3>CSS</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-brands fa-android"></i>
+              <h3>Kotlin</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <h3>Dart</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-database"></i>
+              <h3>SQL</h3>
+            </article>
+            <article class="language-card glass-card">
+              <i class="fa-solid fa-terminal"></i>
+              <h3>Bash / Shell</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-container reveal">
+        <div class="section-heading">
+          <p>Work Showcase</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card glass-card reveal">
+            <img src="assets/projects/project-placeholder.svg" alt="Smart Complaint Management System" />
+            <div class="project-content">
+              <h3>Smart Complaint Management System</h3>
+              <p>
+                Python Flask web application for efficient citizen complaint handling and
+                inter-department coordination.
+              </p>
+              <p class="tech-stack">Python · Flask · HTML · CSS · JavaScript</p>
+              <ul>
+                <li>Multi-role dashboards (Citizen, Staff, Admin)</li>
+                <li>Secure authentication and real-time tracking</li>
+                <li>Data analytics with PDF/CSV report generation</li>
+                <li>Image uploads, feedback module, and DB initialization</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Abhishekshah54/Smart-Complaint-Management-System" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" class="btn btn-primary">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <img src="assets/projects/project-placeholder.svg" alt="RestaurantPro QR Based Restaurant Management System" />
+            <div class="project-content">
+              <h3>RestaurantPro – QR Based Restaurant Management System</h3>
+              <p>
+                Web-based restaurant management system with real-time order flow and automated billing.
+              </p>
+              <p class="tech-stack">PHP · MySQL · HTML · CSS · JavaScript</p>
+              <ul>
+                <li>Table and order management with status tracking</li>
+                <li>Automated billing with tax and payment handling</li>
+                <li>Menu categories, pricing, and inventory tracking</li>
+                <li>Secure login and role-based access for staff</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Abhishekshah54/Restaurant-Management-Using-QR-code-Using-PHP" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" class="btn btn-primary">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <img src="assets/projects/project-placeholder.svg" alt="Reviews of EV Vehicle in India" />
+            <div class="project-content">
+              <h3>Reviews of EV Vehicle in India</h3>
+              <p>
+                Data analysis project on EV customer reviews to uncover sentiment and market trends.
+              </p>
+              <p class="tech-stack">Python · Excel · Tableau · Kaggle Dataset</p>
+              <ul>
+                <li>Data cleaning and preprocessing for 2W/4W EV datasets</li>
+                <li>Sentiment and ratings trend analysis</li>
+                <li>Aspect-based review evaluation</li>
+                <li>Interactive Tableau dashboards and visualizations</li>
+              </ul>
+              <div class="project-links">
+                <span class="btn btn-secondary btn-disabled">Analysis Project (No GitHub)</span>
+                <a href="#" class="btn btn-primary">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <img src="assets/projects/project-placeholder.svg" alt="Vehicle Number Plate Detection System" />
+            <div class="project-content">
+              <h3>Vehicle Number Plate Detection System (ML)</h3>
+              <p>
+                Web-based number plate detection solution using machine learning and image recognition.
+              </p>
+              <p class="tech-stack">Python · Flask · HTML · CSS · Bootstrap · Machine Learning</p>
+              <ul>
+                <li>Image upload and automatic plate recognition</li>
+                <li>Flask backend integrated with ML model</li>
+                <li>Responsive frontend using HTML, CSS, and Bootstrap</li>
+                <li>Detected outputs shown in user-friendly interface</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Abhishekshah54/StockPlusAI-Intelligent_Stock_Market_App" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" class="btn btn-primary">Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass-card reveal">
+            <img src="assets/projects/project-placeholder.svg" alt="StockPlus AI Intelligent Stock Market Analytics App" />
+            <div class="project-content">
+              <h3>StockPlus AI – Intelligent Stock Market Analytics App (Android)</h3>
+              <p>
+                Android stock analytics app for real-time tracking, IPO discovery, and dividend
+                management.
+              </p>
+              <p class="tech-stack">Java · Android SDK 36 · Firebase · Retrofit · OkHttp · Gson</p>
+              <ul>
+                <li>Firebase Auth, Firestore, and Storage integration</li>
+                <li>Live market APIs using Retrofit, OkHttp, and Gson</li>
+                <li>Multi-fragment UI with ViewModel and ViewBinding</li>
+                <li>Charts with MPAndroidChart for stock insights</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Abhishekshah54/StockPlusAI-Intelligent_Stock_Market_App" class="btn btn-secondary" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" class="btn btn-primary">Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section section-container reveal">
+        <div class="section-heading">
+          <p>Journey</p>
+          <h2>Professional Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item glass-card reveal">
+            <div class="timeline-dot"></div>
+            <h3>Assistant Manager</h3>
+            <p class="company">Online Mehsoo Seller</p>
+            <p>
+              Supported operations, communication, and process improvements while managing workflows and
+              day-to-day business activities.
+            </p>
+          </article>
+
+          <article class="timeline-item glass-card reveal">
+            <div class="timeline-dot"></div>
+            <h3>Sales Agent</h3>
+            <p class="company">Freelancer Membership Team</p>
+            <p>
+              Handled client communication, promoted services, and contributed to user onboarding and
+              membership growth.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="section section-container reveal">
+        <div class="section-heading">
+          <p>Credentials</p>
+          <h2>Certifications</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="glass-card">
+            <h3>Professional Certifications</h3>
+            <ul class="skill-list">
+              <li>Machine Learning using Python - Infosys Springboard</li>
+              <li>Software Development and Testing - Infosys Springboard</li>
+              <li>Software Engineering - Infosys Springboard</li>
+              <li>
+                Data Analytics Essentials - National Skill Development Corporation (via Cisco Networking
+                Academy)
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-container reveal">
+        <div class="section-heading">
+          <p>Get In Touch</p>
+          <h2>Contact</h2>
+        </div>
+
+        <div class="contact-layout">
+          <article class="glass-card contact-info-card">
+            <h3>Reach Me Directly</h3>
+            <p>Open to collaboration, freelance projects, and full stack development opportunities.</p>
+
+            <div class="contact-links">
+              <a href="mailto:shahabhishek7789@gmail.com" class="contact-link-item">
+                <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+                <span>shahabhishek7789@gmail.com</span>
+              </a>
+
+              <a
+                href="https://maps.google.com/?q=Rajkot,Gujarat,India"
+                target="_blank"
+                rel="noopener"
+                class="contact-link-item"
+              >
+                <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+                <span>Rajkot, Gujarat, India</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/abhishekshah1909"
+                target="_blank"
+                rel="noopener"
+                class="contact-link-item"
+              >
+                <span class="contact-icon"><i class="fa-brands fa-linkedin"></i></span>
+                <span>LinkedIn Profile</span>
+              </a>
+
+              <a
+                href="https://github.com/Abhishekshah54"
+                target="_blank"
+                rel="noopener"
+                class="contact-link-item"
+              >
+                <span class="contact-icon"><i class="fa-brands fa-github"></i></span>
+                <span>GitHub Profile</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="contact-form glass-card">
+            <h3>Send Message via Google Form</h3>
+            <p class="contact-form-note">Fill the embedded form below, or open it in a new tab.</p>
+            <div class="contact-meta">
+              <span><i class="fa-regular fa-clock"></i> Quick Response</span>
+              <span><i class="fa-solid fa-shield-halved"></i> Secure Submission</span>
+            </div>
+            <div class="google-form-wrap">
+              <iframe
+                title="Abhishek Shah Contact Form"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfdTKPjsJ_nGEhzF4ZeJGRL_dKKUKjLYib9fCx2l1NGG9U0Ow/viewform?embedded=true"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              >
+                Loading…
+              </iframe>
+            </div>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfdTKPjsJ_nGEhzF4ZeJGRL_dKKUKjLYib9fCx2l1NGG9U0Ow/viewform?usp=publish-editor"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-secondary open-google-form-btn"
+              ><i class="fa-solid fa-up-right-from-square"></i> Open Google Form</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section-container">
+      <div class="footer-socials">
+        <a href="https://github.com/Abhishekshah54" target="_blank" rel="noopener" aria-label="GitHub"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/abhishekshah1909"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="mailto:shahabhishek7789@gmail.com" aria-label="Email"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+      </div>
+      <p>© <span id="year"></span> Abhishek Shah. All rights reserved.</p>
+      <p>Built by Abhishek Shah</p>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
