@@ -38,17 +38,22 @@ body.light-theme {
 
 html {
   scroll-behavior: smooth;
+  background-color: #060813;
 }
 
 body {
   font-family: "Inter", sans-serif;
   color: var(--text-primary);
+  background-color: var(--bg-primary);
   background: linear-gradient(120deg, var(--bg-primary), var(--bg-secondary), var(--bg-primary));
   background-size: 220% 220%;
   animation: gradientShift 14s ease infinite;
   min-height: 100vh;
   overflow-x: hidden;
   line-height: 1.6;
+  position: relative;
+  isolation: isolate;
+  backface-visibility: hidden;
 }
 
 #particle-canvas {
@@ -56,7 +61,9 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: -2;
+  z-index: -1;
+  pointer-events: none;
+  transform: translateZ(0);
 }
 
 .section-container {
@@ -773,13 +780,15 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translate3d(0, 24px, 0);
   transition: opacity 0.75s ease, transform 0.75s ease;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
 }
 
 .reveal.show {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
 @keyframes gradientShift {

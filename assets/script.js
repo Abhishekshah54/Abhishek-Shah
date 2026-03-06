@@ -55,8 +55,7 @@ const typingPhrases = [
   "Python Developer",
   "Web & Mobile App Developer",
   "AI Enthusiast",
-  "Data Analyst",
-  "BCA Student (CGPA 8.97)"
+  "Data Analyst"
 ];
 
 let phraseIndex = 0;
@@ -113,8 +112,11 @@ revealElements.forEach((element) => revealObserver.observe(element));
 // Active navigation link by visible section
 const sections = document.querySelectorAll("main section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
+const backToTopButton = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+let scrollTicking = false;
+
+function updateOnScroll() {
   let currentSectionId = "home";
 
   sections.forEach((section) => {
@@ -128,14 +130,27 @@ window.addEventListener("scroll", () => {
     const isActive = anchor.getAttribute("href") === `#${currentSectionId}`;
     anchor.classList.toggle("active", isActive);
   });
-});
 
-// Back-to-top button visibility and behavior
-const backToTopButton = document.getElementById("backToTop");
+  if (backToTopButton) {
+    backToTopButton.classList.toggle("show", window.scrollY > 300);
+  }
 
-window.addEventListener("scroll", () => {
-  backToTopButton.classList.toggle("show", window.scrollY > 300);
-});
+  scrollTicking = false;
+}
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!scrollTicking) {
+      requestAnimationFrame(updateOnScroll);
+      scrollTicking = true;
+    }
+  },
+  { passive: true }
+);
+
+// Ensure nav highlight and back-to-top state are correct on load.
+updateOnScroll();
 
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
